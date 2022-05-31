@@ -1,0 +1,69 @@
+*{
+  /*font-family: Helvetica Neue,Helvetica,Arial,sans-serif;*/
+  font-family: 'Noto Sans', sans-serif;
+}
+html, body {
+  height: 100%;
+  width: 100%;
+}
+section img{
+  display: inline-block;
+}
+#sobreMi{
+  background-color: #b2bcbb;
+  color:#365b77;
+  margin: 0px!important;
+  min-height: 5rem;
+  border: 0.5pt solid black;
+  padding: 1%;
+}
+#sobreMi h3{
+  color: white;
+  display:inline;
+}
+#sobreMi #fotoPerfil{
+  display:inline;
+}
+#conocimientos{
+  background-color: #21597a; 
+  margin: 0; 
+  color: white;}
+#video{background-color: rgb(		232, 221, 160);}
+
+#video{
+  background-color: #b2bcbb;
+  color: white;
+}
+section{
+  padding: 30px;
+}
+
+header{
+  background-color:#22404a;
+  color: white;
+}
+header a{
+  color: white;
+}
+#proyectos{
+  background-color:#21597a;
+  color: white;
+}
+#proyectos table, th, td {
+  border: 1px solid;
+  margin: 0 auto;
+}
+
+#proyectos table{
+  position: center;
+  border-radius: 4px;
+}
+
+#miciudad{
+  background-color:#b2bcbb;
+}
+
+#contacto{
+  background-color:black;
+  color: white;
+}
