@@ -13,9 +13,14 @@
 <body>
   <header>
     <h1>Hello Mundo</h1>
-    <nav id="menu">
+    
+    <nav class="nav-menu">
+      <input type="checkbox" id="check">
+      <label for="check" class="checkbtn">
+        <i class="menu-icon"><img src="/media/svg/hamburger.svg" alt="menu-burger"></i>
+      </label>
         <ul>
-        <li><a href="#sobreMi" class="active">Sobre mi</a></li>
+        <li><a href="#sobreMi">Sobre mi</a></li>
         <li><a href="#conocimientos">Conocimientos</a></li>
         <li><a href="#video">Canción favorita</a></li>
         <li><a href="#proyectos">Proyectos</a></li>
@@ -24,14 +29,29 @@
       </ul>
     </nav>
   </header>
-  <script src="script.js"></script>
   <section id="sobreMi">
-    <h3>Sobre mi</h3>
-    <h2>Alan Xavier Barco Gaspar</h2>
+    <div id="texto">
+    <div id="titulo"><h3>Sobre mi   &nbsp;&nbsp;&nbsp;&nbsp;<img src="/media/svg/user.svg" alt="Ícono perfil"></h3></div>    
+    <br><br>
+    <h2>Alan Xavier Barco Gaspar</h2><br><br>
     <p>Soy estudiante de ingeniería en ciencias computacionales en la Escuela Superior Politécnica del Litoral, la mejor universidad pública del Ecuador. Me considero una persona que disfruta del día a día y no se deja llevar por malos ratos, puedo ser gracioso dependiendo de las circunstancias y también soy buen oyente cuando se necesita de un amigo. Me gusta hacer deporte como natación, basketball y fútbol, disfruto pasar tiempo con amigos y con mi familia. Siento un interés muy grande por aprender cada día acerca de las nuevas tecnologías con las cuales podemos hacer de nuestra vida más fáciles a lo largo del tiempo.</p>
-    <img id="fotoPerfil" src="media/fotoPerfil.jpg" alt="Foto de perfil" width="450">
+    </div>
+    <div id="img">
+      <img id="fotoPerfil" src="media/fotoPerfil.jpg" alt="Foto de perfil" width="450">
+  </div>
   </section>
+  
+  <div id="video">
+    <div class="tituloVideo">
+    <h3>Canción favorita</h3>
+    </div>
+    <video width="320" height="240" controls>
+      <source src="/media/musica.mp4" type="video/mp4"> 
+      Your browser does not support the video tag.
+    </video>
+  </div>
   <section id ="conocimientos">
+    <div class="conocimientosTabla">
     <h3 style="color:white">Conocimientos</h3>
     <ul style="color:white">
       <li>Java</li>
@@ -39,7 +59,8 @@
       <li>C</li>
       <li>HTML</li>
       <li>CSS</li>
-    </ul>
+    </ul><br></div>
+    <div class="hobbiesTabla">
     <h3>Hobbies</h3>
     <ul>
       <li>Música</li>
@@ -47,49 +68,45 @@
       <li>Viajes</li>
       <li>Programación</li>
     </ul>
-  </section>
-  <section id="video">
-    <h3>Canción favorita</h3>
-    <video width="320" height="240" controls>
-      <source src="movie.mp4" type="video/mp4"> 
-      Your browser does not support the video tag.
-    </video>
+  </div>
   </section>
   <section id="proyectos">
     <h3>Proyectos</h3>
     <table>
-    <tr>
+    <tr id = "titulos">
       <th>Nombre</th>
       <th>Ver</th>
       <th>Año</th>
     </tr>
     <tr>
-      <th>Base de datos</th>
-      <td><a href="https://github.com/alanbarco/proy-base-datos.git">Click aquí</a></td>
-      <td>2021</td>
+      <th>&nbsp;&nbsp; &nbsp;&nbsp;Base de datos&nbsp;&nbsp; &nbsp;&nbsp;</th>
+      <td><a href="https://github.com/alanbarco/proy-base-datos.git">&nbsp;&nbsp; &nbsp;&nbsp;Click aquí&nbsp;&nbsp; &nbsp;&nbsp;</a></td>
+      <td>&nbsp;&nbsp; &nbsp;&nbsp;2021&nbsp;&nbsp; &nbsp;&nbsp;</td>
     </tr>
       <tr>
-      <th>Máquina expendedora</th>
-      <td><a href="https://github.com/alanbarco/ProyectoMIPS.git">Click aquí</a></td>
-      <td>2021</td>
+      <th>&nbsp;&nbsp; &nbsp;&nbsp;Máquina expendedora&nbsp;&nbsp; &nbsp;&nbsp;</th>
+      <td><a href="https://github.com/alanbarco/ProyectoMIPS.git">&nbsp;&nbsp; &nbsp;&nbsp;Click aquí &nbsp;&nbsp; &nbsp;&nbsp;</a></td>
+      <td>&nbsp;&nbsp; &nbsp;&nbsp;2021&nbsp;&nbsp; &nbsp;&nbsp;</td>
     </tr>
      <tr>
-      <th>Sistema de turnos en hospital</th>
-      <td><a href="https://bitbucket.org/AlanBarco/proyectoed/src/master/">Click aquí</a></td>
-      <td>2020</td>
+      <th>&nbsp;&nbsp; &nbsp;&nbsp;Sistema de turnos en hospital&nbsp;&nbsp; &nbsp;&nbsp;</th>
+      <td><a href="https://bitbucket.org/AlanBarco/proyectoed/src/master/">&nbsp;&nbsp; &nbsp;&nbsp;Click aquí&nbsp;&nbsp; &nbsp;&nbsp;</a></td>
+      <td>&nbsp;&nbsp; &nbsp;&nbsp;2020&nbsp;&nbsp; &nbsp;&nbsp;</td>
     </tr>
   </table>
   </section>
   <section id="miciudad">
-    <h3>Mi Ciudad</h3>
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d255168.2564009757!2d-80.1201877724497!3d-2.1521517144211093!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x902d13cbe855805f%3A0x8015a492f4fca473!2sGuayaquil!5e0!3m2!1ses!2sec!4v1653657573344!5m2!1ses!2sec" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-    <img src="/media/gye.jpg" width="300">
+    <h3>Mi Ciudad</h3><br><br>
+    <div>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d255168.2564009757!2d-80.1201877724497!3d-2.1521517144211093!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x902d13cbe855805f%3A0x8015a492f4fca473!2sGuayaquil!5e0!3m2!1ses!2sec!4v1653657573344!5m2!1ses!2sec" width="500" height="500" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="mapa"></iframe>
+    <a href="https://www.guayaquilesmidestino.com/home"><img src="/media/gye.jpg" class="imagenCiudad" alt="Fotos de Guayaquil"></a>
+  </div>
   </section>
   <section id="contacto">
     <h3>Contáctame</h3>
     <p>Deja tu correo electrónico y estaremos en contacto!</p>
     <form>
-      <input type="email">
+      <input type="email" placeholder="Correo electrónico">
       <button>Enviar</button>
     </form>
   </section>
