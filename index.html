@@ -13,12 +13,8 @@
 <body>
   <header>
     <h1>Hello Mundo</h1>
-    
+  </header>
     <nav class="nav-menu">
-      <input type="checkbox" id="check">
-      <label for="check" class="checkbtn">
-        <i class="menu-icon"><img src="/media/svg/hamburger.svg" alt="menu-burger"></i>
-      </label>
         <ul>
         <li><a href="#sobreMi">Sobre mi</a></li>
         <li><a href="#conocimientos">Conocimientos</a></li>
@@ -28,11 +24,13 @@
         <li><a href="#contacto">Contacto</a></li>
       </ul>
     </nav>
-  </header>
+  
   <section id="sobreMi">
+    
+    <h3>Sobre mi   &nbsp;&nbsp;&nbsp;&nbsp;
+      <img src="/media/svg/user.svg" alt="Ícono perfil"></h3>
+    <br><br>    
     <div id="texto">
-    <div id="titulo"><h3>Sobre mi   &nbsp;&nbsp;&nbsp;&nbsp;<img src="/media/svg/user.svg" alt="Ícono perfil"></h3></div>    
-    <br><br>
     <h2>Alan Xavier Barco Gaspar</h2><br><br>
     <p>Soy estudiante de ingeniería en ciencias computacionales en la Escuela Superior Politécnica del Litoral, la mejor universidad pública del Ecuador. Me considero una persona que disfruta del día a día y no se deja llevar por malos ratos, puedo ser gracioso dependiendo de las circunstancias y también soy buen oyente cuando se necesita de un amigo. Me gusta hacer deporte como natación, basketball y fútbol, disfruto pasar tiempo con amigos y con mi familia. Siento un interés muy grande por aprender cada día acerca de las nuevas tecnologías con las cuales podemos hacer de nuestra vida más fáciles a lo largo del tiempo.</p>
     </div>
@@ -41,15 +39,12 @@
   </div>
   </section>
   
-  <div id="video">
-    <div class="tituloVideo">
-    <h3>Canción favorita</h3>
-    </div>
-    <video width="320" height="240" controls>
+  <section id="contenedorVideo">
+    <h3>Canción favorita &nbsp;&nbsp;&nbsp;&nbsp;<img src="/media/svg/headphones.svg" alt="Ícono musica"></h3>
+    <video controls>
       <source src="/media/musica.mp4" type="video/mp4"> 
-      Your browser does not support the video tag.
     </video>
-  </div>
+  </section>
   <section id ="conocimientos">
     <div class="conocimientosTabla">
     <h3 style="color:white">Conocimientos</h3>
@@ -59,7 +54,11 @@
       <li>C</li>
       <li>HTML</li>
       <li>CSS</li>
-    </ul><br></div>
+    </ul><br>
+    </div>
+    <div class = "imgCononocimentos">
+    <img src="/media/svg/programando.svg" alt="Programar">
+  </div>
     <div class="hobbiesTabla">
     <h3>Hobbies</h3>
     <ul>
@@ -68,10 +67,13 @@
       <li>Viajes</li>
       <li>Programación</li>
     </ul>
+    
   </div>
+  <div ><img src="/media/svg/ciclismo.svg" alt="Programar"></div>
   </section>
   <section id="proyectos">
-    <h3>Proyectos</h3>
+    <h3>Proyectos &nbsp;&nbsp;&nbsp;&nbsp;
+        <img src="/media/svg/new.svg" alt="Ícono proyectos"></h3>
     <table>
     <tr id = "titulos">
       <th>Nombre</th>
@@ -96,17 +98,25 @@
   </table>
   </section>
   <section id="miciudad">
-    <h3>Mi Ciudad</h3><br><br>
-    <div>
+    <h3>Mi Ciudad&nbsp;&nbsp;&nbsp;&nbsp;
+      <img src="/media/svg/map.svg" alt="Ícono ciudad"></h3><br><br>
+
     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d255168.2564009757!2d-80.1201877724497!3d-2.1521517144211093!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x902d13cbe855805f%3A0x8015a492f4fca473!2sGuayaquil!5e0!3m2!1ses!2sec!4v1653657573344!5m2!1ses!2sec" width="500" height="500" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="mapa"></iframe>
-    <a href="https://www.guayaquilesmidestino.com/home"><img src="/media/gye.jpg" class="imagenCiudad" alt="Fotos de Guayaquil"></a>
-  </div>
+    <a href="https://www.guayaquilesmidestino.com/home">
+      <div class="img-ciudad">
+      <img src="/media/gye.jpg" class="imagenCiudad" alt="Fotos de Guayaquil">
+      <div class="texto-imagen">Clickea en las fotos para conocer mi ciudad!</div>
+    </div>
+    </a>
+
   </section>
   <section id="contacto">
-    <h3>Contáctame</h3>
+    <h3>Contáctame&nbsp;&nbsp;&nbsp;&nbsp;
+      <img src="/media/svg/phone.svg" alt="Ícono contacto"></h3>
     <p>Deja tu correo electrónico y estaremos en contacto!</p>
     <form>
-      <input type="email" placeholder="Correo electrónico">
+      <input type="email" placeholder="Correo electrónico"><br>
+      <textarea placeholder="Escribir mensaje" cols="50" rows="5"></textarea><br>
       <button>Enviar</button>
     </form>
   </section>
