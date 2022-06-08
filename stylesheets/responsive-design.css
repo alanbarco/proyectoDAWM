@@ -1,0 +1,16 @@
+@media only screen and (max-width: 640px){
+    #sobreMi, #conocimientos{
+      display: grid;
+      grid-template-columns: 100%;
+    }
+    #miciudad img, .contenedor-img-ciudad{
+      display: none;
+    }
+    #miciudad{
+        display: grid;
+        grid-template-areas: "fila11" "fila12";
+    }
+    iframe{
+        grid-area: fila12;
+    }
+  }

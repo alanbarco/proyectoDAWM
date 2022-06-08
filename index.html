@@ -4,11 +4,13 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Proyecto</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
   <link rel='stylesheet' href='stylesheets/style.css' />
+  <link rel='stylesheet' href='stylesheets/responsive-design.css' />
 </head>
 <body>
   <header>
@@ -17,8 +19,8 @@
     <nav class="nav-menu">
         <ul>
         <li><a href="#sobreMi">Sobre mi</a></li>
+        <li><a href="#contenedorVideo">Canción favorita</a></li>
         <li><a href="#conocimientos">Conocimientos</a></li>
-        <li><a href="#video">Canción favorita</a></li>
         <li><a href="#proyectos">Proyectos</a></li>
         <li><a href="#miciudad">Mi ciudad</a></li>
         <li><a href="#contacto">Contacto</a></li>
@@ -28,7 +30,7 @@
   <section id="sobreMi">
     
     <h3>Sobre mi   &nbsp;&nbsp;&nbsp;&nbsp;
-      <img src="/media/svg/user.svg" alt="Ícono perfil"></h3>
+      <img src="media/svg/user.svg" alt="Ícono perfil"></h3>
     <br><br>    
     <div id="texto">
     <h2>Alan Xavier Barco Gaspar</h2><br><br>
@@ -40,9 +42,9 @@
   </section>
   
   <section id="contenedorVideo">
-    <h3>Canción favorita &nbsp;&nbsp;&nbsp;&nbsp;<img src="/media/svg/headphones.svg" alt="Ícono musica"></h3>
+    <h3>Canción favorita &nbsp;&nbsp;&nbsp;&nbsp;<img src="media/svg/headphones.svg" alt="Ícono musica"></h3>
     <video controls>
-      <source src="/media/musica.mp4" type="video/mp4"> 
+      <source src="media/musica.mp4" type="video/mp4"> 
     </video>
   </section>
   <section id ="conocimientos">
@@ -57,7 +59,7 @@
     </ul><br>
     </div>
     <div class = "imgCononocimentos">
-    <img src="/media/svg/programando.svg" alt="Programar">
+    <img src="media/svg/programando.svg" alt="Programar">
   </div>
     <div class="hobbiesTabla">
     <h3>Hobbies</h3>
@@ -69,11 +71,11 @@
     </ul>
     
   </div>
-  <div ><img src="/media/svg/ciclismo.svg" alt="Programar"></div>
+  <div ><img src="media/svg/ciclismo.svg" alt="Programar"></div>
   </section>
   <section id="proyectos">
     <h3>Proyectos &nbsp;&nbsp;&nbsp;&nbsp;
-        <img src="/media/svg/new.svg" alt="Ícono proyectos"></h3>
+        <img src="media/svg/new.svg" alt="Ícono proyectos"></h3>
     <table>
     <tr id = "titulos">
       <th>Nombre</th>
@@ -99,20 +101,22 @@
   </section>
   <section id="miciudad">
     <h3>Mi Ciudad&nbsp;&nbsp;&nbsp;&nbsp;
-      <img src="/media/svg/map.svg" alt="Ícono ciudad"></h3><br><br>
+      <img src="media/svg/map.svg" alt="Ícono ciudad"></h3><br><br>
 
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d255168.2564009757!2d-80.1201877724497!3d-2.1521517144211093!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x902d13cbe855805f%3A0x8015a492f4fca473!2sGuayaquil!5e0!3m2!1ses!2sec!4v1653657573344!5m2!1ses!2sec" width="500" height="500" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="mapa"></iframe>
-    <a href="https://www.guayaquilesmidestino.com/home">
-      <div class="img-ciudad">
-      <img src="/media/gye.jpg" class="imagenCiudad" alt="Fotos de Guayaquil">
-      <div class="texto-imagen">Clickea en las fotos para conocer mi ciudad!</div>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d255168.2564009757!2d-80.1201877724497!3d-2.1521517144211093!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x902d13cbe855805f%3A0x8015a492f4fca473!2sGuayaquil!5e0!3m2!1ses!2sec!4v1653657573344!5m2!1ses!2sec" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="mapa"></iframe>
+    
+    <div class="contenedor-img-ciudad">
+      <img src="media/gye.jpg" class="imagenCiudad" alt="Fotos de Guayaquil">
+      <div class="texto-imagen"><a href="https://www.guayaquilesmidestino.com/home">
+        Clickea si quieres conocer más de mi ciudad!</a>
+      </div>
     </div>
-    </a>
+    
 
   </section>
   <section id="contacto">
     <h3>Contáctame&nbsp;&nbsp;&nbsp;&nbsp;
-      <img src="/media/svg/phone.svg" alt="Ícono contacto"></h3>
+      <img src="media/svg/phone.svg" alt="Ícono contacto"></h3>
     <p>Deja tu correo electrónico y estaremos en contacto!</p>
     <form>
       <input type="email" placeholder="Correo electrónico"><br>
