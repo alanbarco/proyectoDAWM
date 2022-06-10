@@ -3,7 +3,27 @@
       display: grid;
       grid-template-columns: 100%;
     }
-    #miciudad img, .contenedor-img-ciudad{
+    #sobreMi #img{
+      display: block;
+      width: 80%;
+      height: auto;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .conocimientosTabla, .hobbiesTabla{
+      padding: 5%;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    #conocimientos .img-conoc{
+        display: block;
+        width: 50%;
+        height: auto;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    #miciudad .contenedor-img-ciudad{
       display: none;
     }
     #miciudad{
