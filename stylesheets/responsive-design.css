@@ -10,6 +10,10 @@
       margin-left: auto;
       margin-right: auto;
     }
+    #contenedorVideo video{
+      width: 100%;
+      height: auto;
+    }
     .conocimientosTabla, .hobbiesTabla{
       padding: 5%;
       display: block;
