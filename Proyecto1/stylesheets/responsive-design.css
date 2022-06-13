@@ -4,7 +4,6 @@
       grid-template-columns: 100%;
     }
     #sobreMi #img{
-      display: block;
       width: 80%;
       height: auto;
       margin-left: auto;
@@ -36,5 +35,12 @@
     }
     iframe{
         grid-area: fila12;
+    }
+    .div-tabla{
+      padding-top: 5%;
+    }
+    .div-tabla table{
+      display: block;
+      overflow-x: auto;
     }
   }
