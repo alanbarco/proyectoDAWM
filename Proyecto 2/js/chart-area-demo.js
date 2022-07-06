@@ -4,7 +4,7 @@ Chart.defaults.global.defaultFontColor = '#292b2c';
 
 //Cargar Datos
 let arrEquipos = [];
-const counts = {};
+let counts = {};
 let claves =[];
 let cantidad = [];
 fetch("https://www.balldontlie.io/api/v1/players")
@@ -17,11 +17,24 @@ fetch("https://www.balldontlie.io/api/v1/players")
                 let equipo = info_equipo['full_name'];
                 arrEquipos.push(equipo);
             }            
+            let select = document.querySelector('div.selector > select');
+            let arrConferencias=[];
+            for(let elemento of datos){
+                let info_equipo = elemento['team'];
+                let conferencia = info_equipo['conference']
+                if(arrConferencias.indexOf(conferencia) == -1){
+                    arrConferencias.push(conferencia);
+                }
+            }     
             arrEquipos.forEach(function (x) { counts[x] = (counts[x] || 0) + 1; });
             claves = Object.keys(counts);
             cantidad = Object.values(counts);
-            var ctx = document.getElementById("myAreaChart");
-        var areaChart = new Chart(ctx, {
+            for(let conferencia of arrConferencias){
+              let plantilla = `<option value= "${conferencia}">${conferencia}</option>`
+              select.innerHTML += plantilla;
+            }
+          var ctx = document.getElementById("myAreaChart");
+          var areaChart = new Chart(ctx, {
           type: 'line',
           data: {
             labels: claves,
@@ -69,7 +82,30 @@ fetch("https://www.balldontlie.io/api/v1/players")
             }
           }
         });
-
+        select.addEventListener("change", function(){
+          arrEquipos2=[];
+          claves2 = [];
+          cantidad2 = [];
+          counts ={};
+          console.log(arrEquipos2, claves2,cantidad2)
+          for(let elemento of datos){
+              if(select.value == elemento['team']['conference']){
+                var info_equipo = elemento['team'];
+                var equipo = info_equipo['full_name'];
+                arrEquipos2.push(equipo);
+              }
+            } 
+            
+            arrEquipos2.forEach(function (x) { counts[x] = (counts[x] || 0) + 1; });
+            
+            claves2 = Object.keys(counts);
+            cantidad2 = Object.values(counts);
+            console.log(arrEquipos2, counts)
+            areaChart.data.labels = [];
+            areaChart['data']['labels'] = claves2;
+            areaChart['data']['datasets']['data'] = cantidad2;
+            console.log(areaChart.data.labels)
+        }) 
         }).catch(console.error);
 
 
