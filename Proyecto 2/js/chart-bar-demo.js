@@ -4,17 +4,16 @@ Chart.defaults.global.defaultFontColor = '#292b2c';
 
 // Bar Chart Example
 let clavesConf =[];
-let conferencia = [];
 let arrConferencias = [];
 let cantidadConf=[];
 const conf = {};
-fetch("https://www.balldontlie.io/api/v1/players")
+fetch("https://www.balldontlie.io/api/v1/teams")
         .then(response => response.json())
         .then(data => {
             let datos = data['data'];
             for(let elemento of datos){
-                let info_equipo = elemento['team'];
-                conferencia = info_equipo['conference'];
+                let conferencia = elemento['conference'];
+                //conferencia = info_equipo['conference'];
                 arrConferencias.push(conferencia);
             }            
             arrConferencias.forEach(function (x) { conf[x] = (conf[x] || 0) + 1; });
@@ -49,7 +48,7 @@ var myLineChart = new Chart(ctx, {
       yAxes: [{
         ticks: {
           min: 0,
-          max: 14,
+          max: 20,
           maxTicksLimit: 10
         },
         gridLines: {
