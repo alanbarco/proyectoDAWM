@@ -14,6 +14,7 @@
     <body class="sb-nav-fixed">
         <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
                  <!-- Navbar Brand-->
+                 <img src="assets/img/pelota.png" width="100" height="100" id="pelota">
                  <a class="navbar-brand ps-3" href="index.html">Jugadores de la NBA</a>
                  <!-- Sidebar Toggle-->
                  <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
@@ -29,17 +30,13 @@
                                 <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                                 Dashboard
                             </a>
-                            <a class="nav-link" href="charts.html">
-                                <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
-                                Charts
-                            </a>
                             <a class="nav-link" href="tables.html">
                                 <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
-                                Tables
+                                Equipos
                             </a>
-                            <a class="nav-link" href="equipo.html">
+                            <a class="nav-link" href="jugador.html">
                                 <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
-                                Equipo
+                                Información de jugador
                             </a>
                         </div>
                     </div>
@@ -49,58 +46,51 @@
                 <main>
                     
                     <div class="container-fluid px-4">
-                        <h1 class="mt-4">Información de Equipo</h1>
+                        <h1 class="mt-4">Información de Jugador</h1>
                         <div class = "selector">
                             <select id="select" >
-                                <option selected>Seleccionar Equipo</option>
+                                <option selected>Seleccionar Jugador</option>
 
                               </select>
                             </div>
                                 <ol class="list-group ">
                                         <li class="list-group-item d-flex justify-content-between align-items-start">
                                             <div class="ms-2 me-auto">
-                                            <div class="fw-bold">Equipo</div>
-                                            <span id = "nombreEquipo">--</span>
+                                            <div class="fw-bold">Nombre</div>
+                                            <span id = "nombre">--</span>
                                             </div>
                                         
                                         </li>
-                                <li class="list-group-item d-flex justify-content-between align-items-start">
-                                    <div class="ms-2 me-auto">
-                                    <div class="fw-bold">Abreviación</div>
-                                    <span id = "abreviacion">--</span>
-                                    </div>
-                                    
-                                </li>
-                                <li class="list-group-item d-flex justify-content-between align-items-start">
-                                    <div class="ms-2 me-auto">
-                                    <div class="fw-bold">Ciudad</div>
-                                    <span id = "ciudad">--</span>
-                                    </div>
+                                        <li class="list-group-item d-flex justify-content-between align-items-start">
+                                            <div class="ms-2 me-auto">
+                                            <div class="fw-bold">Equipo</div>
+                                            <span id = "equipo">--</span>
+                                            </div>
+                                            
+                                        </li>
+                                        <li class="list-group-item d-flex justify-content-between align-items-start">
+                                            <div class="ms-2 me-auto">
+                                            <div class="fw-bold">Ciudad</div>
+                                            <span id = "ciudad">--</span>
+                                            </div>
+                                        
+                                        </li>
+                                        <li class="list-group-item d-flex justify-content-between align-items-start">
+                                            <div class="ms-2 me-auto">
+                                            <div class="fw-bold">Posición</div>
+                                            <span id = "posicion">--</span>
+                                            </div>
+                                        
+                                        </li>
                                 
-                                </li>
-                                <li class="list-group-item d-flex justify-content-between align-items-start">
-                                    <div class="ms-2 me-auto">
-                                    <div class="fw-bold">Conferencia</div>
-                                    <span id = "conferencia">--</span>
-                                    </div>
-                                
-                                </li>
-                                <li class="list-group-item d-flex justify-content-between align-items-start">
-                                    <div class="ms-2 me-auto">
-                                    <div class="fw-bold">División</div>
-                                    <span id = "division">--</span>
-                                    </div>
-                                
-                                </li>
-                            
-                            </ol>
+                                </ol>
                         
                     </div>
                 </main>
                 <footer class="py-4 bg-light mt-auto">
                     <div class="container-fluid px-4">
                         <div class="d-flex align-items-center justify-content-between small">
-                            <div class="text-muted">Copyright &copy; Your Website 2022</div>
+                            <div class="text-muted">Copyright &copy; balldontlie API</div>
                             <div>
                                 <a href="#">Privacy Policy</a>
                                 &middot;

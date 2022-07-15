@@ -157,7 +157,25 @@ p {
   margin-top: 0;
   margin-bottom: 1rem;
 }
+#pelota {
+  position: absolute;
+  animation: rebota 2s alternate infinite ease-out;
+}
 
+@-webkit-keyframes rebota {
+  0% {
+    top: 600px;
+    height: 50px;
+  }
+  10% {
+    top: 560px;
+    height: 100px;
+  }
+  100% {
+    top: 200px;
+    height: 100px;
+  }
+}
 abbr[title],
 abbr[data-bs-original-title] {
   -webkit-text-decoration: underline dotted;
@@ -2133,7 +2151,11 @@ progress {
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
 }
-
+@media (max-width: 700px) {
+  #pelota{
+    display: none;
+  }
+}
 @media (max-width: 575.98px) {
   .table-responsive-sm {
     overflow-x: auto;
