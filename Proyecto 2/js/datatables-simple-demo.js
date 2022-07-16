@@ -23,12 +23,13 @@ window.addEventListener('DOMContentLoaded', event => {
             let datos = data['data'];
             let tableBody = document.getElementById('tableBody');
             let select = document.querySelector('div.selector > select');
-            let select2 = document.querySelector('div.selector > select2');
+            let arrEquipos = [];
             for(var elemento of datos){
                 let nombre = elemento['first_name'];
                 let apellido = elemento['last_name'];
                 let info_equipo = elemento['team'];
                 let equipo = info_equipo['full_name'];
+                arrEquipos.push(equipo);
                 let posicion = elemento['position'];
                 let conferencia = info_equipo['conference']
                 let plantilla = `<tr>
@@ -38,11 +39,14 @@ window.addEventListener('DOMContentLoaded', event => {
                                             <td>${conferencia}</td>
                                 </tr>`;
                 tableBody.innerHTML += plantilla;
-                let plantillaEquipo = `<option value= "${equipo}">${equipo}</option>`;
-                let plantillaEquipo2 = `<option value= "${equipo}">${equipo}</option>`
-                select.innerHTML += plantillaEquipo;
-                //select2.innerHTML += plantillaEquipo2;
             }            
+            let equipos = arrEquipos.filter((item,index)=>{
+                return arrEquipos.indexOf(item) === index;
+              })
+            for(let equipo of equipos){
+                let plantillaEquipo = `<option value= "${equipo}">${equipo}</option>`;
+                select.innerHTML += plantillaEquipo;
+            }
             select.addEventListener("change",function(){
                 tableBody.innerHTML = '';
                 for(var elemento of datos){

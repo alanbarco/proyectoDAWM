@@ -11491,6 +11491,12 @@ body {
   padding-bottom: 0.75rem;
   position: relative;
 }
+#verConferencia:hover{
+    background-color: #2D567D;
+}
+#verConferencia{
+  width: 30%;
+}
 .sb-sidenav .sb-sidenav-menu .nav .nav-link .sb-nav-link-icon {
   font-size: 0.9rem;
 }

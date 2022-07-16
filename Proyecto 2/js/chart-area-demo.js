@@ -33,13 +33,16 @@ fetch("https://www.balldontlie.io/api/v1/players")
               let plantilla = `<option value= "${conferencia}">${conferencia}</option>`
               select.innerHTML += plantilla;
             }
+
+          /**************************CHART********************** */
           var ctx = document.getElementById("myAreaChart");
+
           var areaChart = new Chart(ctx, {
           type: 'line',
           data: {
             labels: claves,
             datasets: [{
-              label: "Sessions",
+              label: "Jugadores",
               lineTension: 0.3,
               backgroundColor: "rgba(2,117,216,0.2)",
               borderColor: "rgba(2,117,216,1)",
@@ -50,7 +53,7 @@ fetch("https://www.balldontlie.io/api/v1/players")
               pointHoverBackgroundColor: "rgba(2,117,216,1)",
               pointHitRadius: 50,
               pointBorderWidth: 2,
-              data: cantidad,
+              data: cantidad,              
             }],
           },
           options: {
@@ -69,7 +72,7 @@ fetch("https://www.balldontlie.io/api/v1/players")
               yAxes: [{
                 ticks: {
                   min: 0,
-                  max: 10,
+                  max: 4,
                   maxTicksLimit: 5
                 },
                 gridLines: {
@@ -77,17 +80,18 @@ fetch("https://www.balldontlie.io/api/v1/players")
                 }
               }],
             },
-            legend: {
-              display: false
-            }
+            
+            
           }
         });
+
+        /*************SELECCIONAR CONFERENCIA********** */
         select.addEventListener("change", function(){
+          
           arrEquipos2=[];
           claves2 = [];
           cantidad2 = [];
           counts ={};
-          console.log(arrEquipos2, claves2,cantidad2)
           for(let elemento of datos){
               if(select.value == elemento['team']['conference']){
                 var info_equipo = elemento['team'];
@@ -100,7 +104,7 @@ fetch("https://www.balldontlie.io/api/v1/players")
             
             claves2 = Object.keys(counts);
             cantidad2 = Object.values(counts);
-            console.log(arrEquipos2, counts)
+            console.log(claves2, cantidad2)
             areaChart.data.labels = [];
             areaChart['data']['labels'] = claves2;
             areaChart['data']['datasets']['data'] = cantidad2;
