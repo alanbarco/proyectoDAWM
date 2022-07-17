@@ -31,10 +31,27 @@ window.addEventListener('DOMContentLoaded', event => {
                 fetch("https://www.balldontlie.io/api/v1/games")
                 .then(response => response.json())
                 .then(data => {
+                    document.getElementById('partidos').innerHTML = '';
                     let datos = data['data'];
                     datos.filter(dato => dato['home_team']['id'] == select.value || dato['visitor_team']['id'] == select.value ).forEach(dato => {
-                        document.getElementById
+                       ;
+                        let fecha = dato['date'];
+                        let visitante = dato['visitor_team']['full_name'];
+                        let local = dato['home_team']['full_name'];
+                        let puntosVis = dato['visitor_team_score'];
+                        let puntsLoc = dato['home_team_score'];
+                        plantilla = ` <div class="card col" style="width: 8rem;">
+                                        <div class="card-header">
+                                        ${fecha}
+                                        </div>
+                                        <ul class="list-group list-group-flush">
+                                        <li class="list-group-item">${visitante}: ${puntosVis}</li>
+                                        <li class="list-group-item">${local}: ${puntsLoc} </li>
+                                        </ul>
+                                    </div>`
+                        document.getElementById('partidos').innerHTML +=plantilla;
                          });
+
                 }).catch(console.error);
     });
 
