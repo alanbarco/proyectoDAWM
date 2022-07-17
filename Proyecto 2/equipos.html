@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>Tables - SB Admin</title>
+        <title>Equipo - SB Admin</title>
         <link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" />
         <link href="css/styles.css" rel="stylesheet" />
         <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
@@ -48,39 +48,58 @@
             </div>
             <div id="layoutSidenav_content">
                 <main>
+                    
                     <div class="container-fluid px-4">
-                        <h1 class="mt-4">Equipos</h1>
-                        
+                        <h1 class="mt-4">Información de Equipo</h1>
                         <div class = "selector">
-                            <select name="select" >
+                            <select id="select" >
                                 <option selected>Seleccionar Equipo</option>
 
                               </select>
-                             
-                        </div>
-                        <div class="card mb-4">
-                            <div class="card-header">
-                                <i class="fas fa-table me-1"></i>
-                                Datos
                             </div>
-                            <div class="card-body">
-                                <table class="table">
-                                    <thead>
-                                      <tr>
-                                        <th scope="col">Nombre de Jugador</th>
-                                        <th scope="col">Equipo</th>
-                                        <th scope="col">Posición</th>
-                                        <th scope="col">Conferencia</th>
-                                      </tr>
-                                    </thead>
-                                    <tbody id="tableBody">
-          
-                                    </tbody>
-                                  </table>
-                            </div>
-                        </div>
+                                <ol class="list-group ">
+                                        <li class="list-group-item d-flex justify-content-between align-items-start">
+                                            <div class="ms-2 me-auto">
+                                            <div class="fw-bold">Nombre</div>
+                                            <span id = "nombre">--</span>
+                                            </div>
+                                        
+                                        </li>
+                                        <li class="list-group-item d-flex justify-content-between align-items-start">
+                                            <div class="ms-2 me-auto">
+                                            <div class="fw-bold">Abreviación</div>
+                                            <span id = "abrev">--</span>
+                                            </div>
+                                            
+                                        </li>
+                                        <li class="list-group-item d-flex justify-content-between align-items-start">
+                                            <div class="ms-2 me-auto">
+                                            <div class="fw-bold">Ciudad</div>
+                                            <span id = "ciudad">--</span>
+                                            </div>
+                                        
+                                        </li>
+                                        <li class="list-group-item d-flex justify-content-between align-items-start">
+                                            <div class="ms-2 me-auto">
+                                            <div class="fw-bold">Conferencia</div>
+                                            <span id = "conferencia">--</span>
+                                            </div>
+                                        
+                                        </li>
+                                        <li class="list-group-item d-flex justify-content-between align-items-start">
+                                            <div class="ms-2 me-auto">
+                                            <div class="fw-bold">División</div>
+                                            <span id = "division">--</span>
+                                            </div>
+                                        
+                                        </li>
+                                </ol>
+                        
                     </div>
-
+                    <div class="container-fluid px-4">
+                        <h2>Partidos</h2>
+                        
+                    </div>
                 </main>
                 <footer class="py-4 bg-light mt-auto">
                     <div class="container-fluid px-4">
@@ -99,6 +118,6 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
         <script src="js/scripts.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" crossorigin="anonymous"></script>
-        <script src="js/datatables-simple-demo.js"></script>
+        <script src="js/equipos.js"></script>
     </body>
 </html>

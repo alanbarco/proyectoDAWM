@@ -20,7 +20,6 @@ window.addEventListener('DOMContentLoaded', event => {
                 .then(response => response.json())
                 .then(data => {
                     let datos = data['data'];
-                    //document.querySelector('div.datos').innerHTML='';
                     datos.filter(dato => dato['id'] == select.value).forEach(dato => {
                         console.log(dato['id'])
                         document.getElementById("nombre").innerHTML = dato['first_name'] +' '+ dato['last_name'];
@@ -34,7 +33,6 @@ window.addEventListener('DOMContentLoaded', event => {
                         }
                          });
                 }).catch(console.error);
-                
                 
             });
             
