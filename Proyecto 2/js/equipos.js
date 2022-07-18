@@ -25,7 +25,7 @@ window.addEventListener('DOMContentLoaded', event => {
                         document.getElementById("abrev").innerHTML = dato['abbreviation'];
                         document.getElementById('ciudad').innerHTML = dato['city'];
                         document.getElementById("conferencia").innerHTML = dato['conference'];
-                        document.getElementById("division").innerHTML = dato['division  '];
+                        document.getElementById("division").innerHTML = dato['division'];
                          });
                 }).catch(console.error);
                 fetch("https://www.balldontlie.io/api/v1/games")
@@ -45,8 +45,8 @@ window.addEventListener('DOMContentLoaded', event => {
                                         ${fecha}
                                         </div>
                                         <ul class="list-group list-group-flush">
-                                        <li class="list-group-item">${visitante}: ${puntosVis}</li>
-                                        <li class="list-group-item">${local}: ${puntsLoc} </li>
+                                        <li class="list-group-item"><b>${visitante}</b>: ${puntosVis}</li>
+                                        <li class="list-group-item"><b>${local}</b>: ${puntsLoc} </li>
                                         </ul>
                                     </div>`
                         document.getElementById('partidos').innerHTML +=plantilla;
