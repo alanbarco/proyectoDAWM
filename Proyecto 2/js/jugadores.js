@@ -2,6 +2,9 @@ window.addEventListener('DOMContentLoaded', event => {
     // Simple-DataTables
     // https://github.com/fiduswriter/Simple-DataTables/wiki
     
+
+
+
     fetch("https://www.balldontlie.io/api/v1/players")
         .then(response => response.json())
         .then(data => {
