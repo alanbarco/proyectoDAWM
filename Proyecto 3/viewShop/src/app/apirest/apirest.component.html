@@ -1,0 +1,16 @@
+<p>
+    <mat-toolbar class="header">
+      <button mat-icon-button class="example-icon arrow_back_ios-icon" routerLink="/principal">
+        <mat-icon>arrow_back_ios</mat-icon>
+      </button>
+      <span>Métodos del API REST</span>
+      
+    </mat-toolbar>
+  </p>
+
+<div class="card border-light mb-3" *ngFor="let metodo of metodos">
+    <div class="card-header">{{metodo.nombre}}</div>
+    <div class="card-body">
+      <p class="card-text">{{metodo.descripcion}}</p>
+    </div>
+  </div>

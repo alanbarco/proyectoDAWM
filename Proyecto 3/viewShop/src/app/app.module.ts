@@ -23,6 +23,7 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatOptionModule } from '@angular/material/core';
 import {MatGridListModule} from '@angular/material/grid-list';
 import { PerfilComponent } from './perfil/perfil.component';
+import { ApirestComponent } from './apirest/apirest.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,7 +31,8 @@ import { PerfilComponent } from './perfil/perfil.component';
     InicioComponent,
     RegistroComponent,
     PrincipalComponent,
-    PerfilComponent
+    PerfilComponent,
+    ApirestComponent
     
   ],
   imports: [
