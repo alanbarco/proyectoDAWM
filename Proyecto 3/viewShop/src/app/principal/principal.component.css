@@ -1,0 +1,25 @@
+body{
+    background-color: red;
+}
+mat-toolbar {
+    background-color: #03989E;
+    color:white;
+}
+mat-card-title{
+    margin-top: 11px;
+    text-align: center;
+}
+mat-card-subtitle{
+    text-align: center;
+}
+
+.user{
+    text-align: center;
+}
+#user{
+    size: 200%;
+}
+#perfil{
+    text-align: center;
+}
+p { margin:0 }

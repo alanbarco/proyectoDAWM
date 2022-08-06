@@ -1,11 +1,21 @@
 use mercado;
 CREATE TABLE Producto
  (
- id int  primary key not null,
- nombre varchar (25),
- precio DOUBLE (10,2),
- categoria varchar (30)
+ producto_id integer not null,
+ nombre varchar (50),
+ precio DOUBLE (25,2),
+ categoria integer,
+ PRIMARY KEY (producto_id),
+ FOREIGN KEY (categoria) REFERENCES categoria(categoria_id)
  );
+
+
+CREATE TABLE categoria(
+categoria_id integer,
+nombre varchar (100),
+primary key (categoria_id)
+);
+
 
 CREATE TABLE Cliente
  (
@@ -15,3 +25,6 @@ CREATE TABLE Cliente
  ciudad varchar (30),
  password varchar (25) not null
  );
+ 
+ select * from cliente;
+ 
