@@ -14,13 +14,11 @@ mat-card-subtitle{
 }
 
 .user{
-    text-align: center;
+    text-align: right;
+    margin-right: 20px;
 }
 #user{
     size: 200%;
-}
-#perfil{
-    text-align: center;
 }
 p { margin:0 }
 .btn-block{

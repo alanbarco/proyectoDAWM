@@ -24,6 +24,7 @@ import { MatOptionModule } from '@angular/material/core';
 import {MatGridListModule} from '@angular/material/grid-list';
 import { PerfilComponent } from './perfil/perfil.component';
 import { ApirestComponent } from './apirest/apirest.component';
+import { PopupComponent } from './popup/popup.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,7 +33,8 @@ import { ApirestComponent } from './apirest/apirest.component';
     RegistroComponent,
     PrincipalComponent,
     PerfilComponent,
-    ApirestComponent
+    ApirestComponent,
+    PopupComponent
     
   ],
   imports: [

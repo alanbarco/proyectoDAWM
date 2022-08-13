@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-
+import {MatDialog} from '@angular/material/dialog';
+import { PopupComponent } from '../popup/popup.component';
 @Component({
   selector: 'app-registro',
   templateUrl: './registro.component.html',
@@ -10,9 +11,11 @@ export class RegistroComponent implements OnInit {
    'Galápagos' , 'Guayas', 'Imbabura', 'Loja',' Los Rios', 'Manabí' , 'Morona Santiago' , 'Napo' , 'Orellana' ,
     'Pastaza' , 'Pichincha' , 'Santa Elena', 'Santo Domingo de los Tsáchilas' , 'Sucumbíos' , 'Tungurahua', 
     'Zamora Chinchipe'];
-  constructor() { }
-
+    constructor() {}
+    /*openDialog(): void {
+      this.dialog.open(PopupComponent);
+  }*/
   ngOnInit(): void {
   }
-
+  
 }
