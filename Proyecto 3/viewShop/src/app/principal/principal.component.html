@@ -1,12 +1,13 @@
 <p>
     <mat-toolbar class="header">
-      <button mat-icon-button class="example-icon arrow_back_ios-icon" routerLink="/inicio">
+      <button mat-icon-button class="example-icon arrow_back_ios-icon" routerLink="/splash">
         <mat-icon>arrow_back_ios</mat-icon>
       </button>
       <span>Catálogo de productos</span>
       
     </mat-toolbar>
   </p>
+  <div class="todo">
   <div class="user">
     <img src="assets/imagenes/user.svg" id="user" routerLink="/perfil">
     <p id="perfil">Perfil</p>
@@ -14,22 +15,25 @@
   <mat-form-field appearance="fill">
     <mat-label>Categoría</mat-label>
     <mat-select >
-      <mat-option *ngFor="let categoria of categorias" value="categoria">{{categoria}}</mat-option>
+      <mat-option *ngFor="let categoria of categorias" value="categoria">{{categoria.nombre}}</mat-option>
     </mat-select>
   </mat-form-field>
-<mat-grid-list cols="2" [gutterSize]="'30px'">
-  <mat-grid-tile *ngFor="let producto of productos">
-  <mat-card class="example-card">
-    <img mat-card-md-image src="{{producto.imagen}}" >
-    <mat-card-title-group>
-      <mat-card-title>{{producto.nombre}}</mat-card-title>
-      <mat-card-subtitle>{{producto.precio}}</mat-card-subtitle>
-    </mat-card-title-group>
-  </mat-card>
-</mat-grid-tile>
-
-
+<mat-grid-list cols="2" [gutterSize]="'25px'" [rowHeight]="'300px'">
+  <mat-grid-tile *ngFor="let producto of dataSource">
+    <mat-card  class="example-card">
+      <img mat-card-md-image src="{{producto.imagen}}" >
+      <mat-card-title-group>
+        <mat-card-title>{{producto.nombre}}</mat-card-title>
+        <mat-card-subtitle>${{producto.precio}}</mat-card-subtitle>
+        
+      </mat-card-title-group>
+      <button routerLink="/producto">Ver</button>
+    </mat-card>
+  </mat-grid-tile>
 </mat-grid-list>
+
+
 <div class="d-flex justify-content-center">
 <button mat-raised-button  class="btn-block" routerLink="/apirest">Métodos API REST</button>
+</div>
 </div>

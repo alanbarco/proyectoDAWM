@@ -6,6 +6,7 @@ import { RegistroComponent } from './registro/registro.component';
 import { PrincipalComponent } from './principal/principal.component';
 import { PerfilComponent } from './perfil/perfil.component';
 import { ApirestComponent } from './apirest/apirest.component';
+import { VistaProductoComponent } from './vista-producto/vista-producto.component';
 const routes: Routes = [
   { path: "splash", component: SplashComponent },
   { path: "principal", component: PrincipalComponent },
@@ -13,6 +14,7 @@ const routes: Routes = [
   { path: "registro", component: RegistroComponent },
   { path: "perfil", component: PerfilComponent },
   { path: "apirest", component: ApirestComponent },
+  { path: "producto", component: VistaProductoComponent },
   { path: "**", redirectTo: "splash" }
 ];
 

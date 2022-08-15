@@ -24,7 +24,9 @@ import { MatOptionModule } from '@angular/material/core';
 import {MatGridListModule} from '@angular/material/grid-list';
 import { PerfilComponent } from './perfil/perfil.component';
 import { ApirestComponent } from './apirest/apirest.component';
-import { PopupComponent } from './popup/popup.component';
+import { HttpClientModule } from '@angular/common/http';
+import { VistaProductoComponent } from './vista-producto/vista-producto.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,7 +36,7 @@ import { PopupComponent } from './popup/popup.component';
     PrincipalComponent,
     PerfilComponent,
     ApirestComponent,
-    PopupComponent
+    VistaProductoComponent
     
   ],
   imports: [
@@ -53,7 +55,8 @@ import { PopupComponent } from './popup/popup.component';
     MatSlideToggleModule,
     MatSelectModule,
     MatOptionModule,
-    MatGridListModule
+    MatGridListModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,31 @@
+body{
+    background-color: green;
+}
+
+.padre{
+    display: grid;
+    grid-template-columns: 60% 40%;
+    column-gap: 1rem;
+}
+mat-toolbar {
+    background-color: #03989E;
+    color:white;
+}
+.info{
+    margin-left: 20px;
+}
+div#img{
+    margin-top: 25%;
+    margin-right: 60%;
+}
+#fotoPerfil{
+    width: 200%;
+    height: auto;
+    border-radius:600px;
+} 
+.iconapp{
+    height: auto;
+    width: 70%;
+    margin-top: 30%;
+    margin-left: 15%;
+}

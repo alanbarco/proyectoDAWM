@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {MatDialog} from '@angular/material/dialog';
-import { PopupComponent } from '../popup/popup.component';
+
 @Component({
   selector: 'app-registro',
   templateUrl: './registro.component.html',
