@@ -1,0 +1,42 @@
+{
+	"model": {
+		"type": "Object",
+		"value": {
+			"id_producto": {
+				"type": "randomNumberBetween",
+                "value": [1, 8]
+			},
+			"fechaIngreso": {
+				"type": "faker",
+				"value": "date.between",
+				"options": ["2022-07-20", "2022-08-19"]
+			},
+
+			"usuario": {
+				"type": "Object",
+				"value": {
+					"firstName": {
+						"type": "faker",
+						"value": "name.firstName"
+					},
+					"lastName": {
+						"type": "faker",
+						"value": "name.lastName"
+					}
+				}
+			},
+            "timesClicked": {
+                "type": "randomNumberBetween",
+                "value": [1, 10000]
+              },
+              "pais": {
+                "type": "faker",
+                "value": "address.country"
+              },
+              "ciudad": {
+                "type": "faker",
+                "value": "address.city"
+              }
+		}
+	}
+}

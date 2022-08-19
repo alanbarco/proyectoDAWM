@@ -1,9 +1,15 @@
 .todo{
-    background-color:  #F6F6E9;
+    background-color:  #F6F6E9;     
+}
+#btnVer{
+    background-color: #C8DEC9;
 }
 mat-toolbar {
     background-color: #03989E;
     color:white;
+}
+mat-icon{
+    color: white;
 }
 mat-card-title{
     margin-top: 11px;
@@ -11,11 +17,16 @@ mat-card-title{
 }
 mat-card-subtitle{
     text-align: center;
+    font-size: 150%;
 }
-
-.user{
-    text-align: right;
-    margin-right: 20px;
+.header{
+    display: flex;
+}
+#btnRep{
+    background-color: #7a9596;
+    margin-left: 20%;
+    margin-bottom: 5%;
+    width: 25%;
 }
 #user{
     size: 200%;

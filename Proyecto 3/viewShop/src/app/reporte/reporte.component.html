@@ -1,0 +1,42 @@
+<p>
+    <mat-toolbar class="header">
+      <button mat-icon-button class="example-icon arrow_back_ios-icon" routerLink="/principal">
+        <mat-icon>arrow_back_ios</mat-icon>
+      </button>
+      <span>Reporte</span>
+
+    </mat-toolbar>
+  </p>
+ <mat-form-field >
+    <mat-label>Categoría</mat-label>
+    <mat-select (selectionChange)="funcion($event.value)">
+      <mat-option value="0">Categoría</mat-option>
+      <mat-option *ngFor="let producto of nombreProductos" value="{{producto.id}}" >{{producto.nombre}}</mat-option>
+    </mat-select>
+</mat-form-field>
+
+
+
+  <table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">Producto ID</th>
+        <th scope="col">Usuario</th>
+        <th scope="col">Ciudad</th>
+        <th scope="col">Fecha de Ingreso</th>
+        <th scope="col">Pais</th>
+      </tr>
+    </thead>
+    <tbody >
+      <tr *ngFor="let info of data | slice:desde:hasta" >
+        <td>{{info.id_producto}}</td>
+        <td>{{info.usuario.firstName}} {{info.usuario.lastName}}</td>
+        <td>{{info.ciudad}}</td>
+        <td>{{info.fechaIngreso}}</td>
+        <td>{{info.pais}}</td>
+      </tr>
+    </tbody>
+  </table>
+
+<mat-paginator [length]="data.length" [pageSize]="pageSize" aria-label="Select page" (page)="cambiarPagina($event)" >
+</mat-paginator>

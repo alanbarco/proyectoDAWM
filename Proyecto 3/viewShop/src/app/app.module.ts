@@ -26,7 +26,8 @@ import { PerfilComponent } from './perfil/perfil.component';
 import { ApirestComponent } from './apirest/apirest.component';
 import { HttpClientModule } from '@angular/common/http';
 import { VistaProductoComponent } from './vista-producto/vista-producto.component';
-
+import { ReporteComponent } from './reporte/reporte.component';
+import {MatPaginatorModule} from '@angular/material/paginator';
 @NgModule({
   declarations: [
     AppComponent,
@@ -36,7 +37,8 @@ import { VistaProductoComponent } from './vista-producto/vista-producto.componen
     PrincipalComponent,
     PerfilComponent,
     ApirestComponent,
-    VistaProductoComponent
+    VistaProductoComponent,
+    ReporteComponent
     
   ],
   imports: [
@@ -44,6 +46,7 @@ import { VistaProductoComponent } from './vista-producto/vista-producto.componen
     AppRoutingModule,
     BrowserAnimationsModule,
     FlexLayoutModule,
+    MatPaginatorModule,
       FormsModule,
     MatToolbarModule,
     MatInputModule,

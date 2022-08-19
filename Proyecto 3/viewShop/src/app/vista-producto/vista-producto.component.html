@@ -12,24 +12,24 @@
     <div class="row g-0">
       <div class="col-md-4">
         <img
-          src="https://mdbcdn.b-cdn.net/wp-content/uploads/2020/06/vertical.webp"
+          src="{{item.imagen}}"
           alt="Trendy Pants and Shoes"
           class="img-fluid rounded-start"
         />
       </div>
       <div class="col-md-8">
         <div class="card-body">
-          <h5 class="card-title">Card title</h5>
+          <h1 class="card-title"><b>{{item.nombre}}</b></h1>
           <p class="card-text">
-            This is a wider card with supporting text below as a natural lead-in to
-            additional content. This content is a little bit longer.
+            ${{item.precio}}
           </p>
           <p class="card-text">
-            <small class="text-muted">Last updated 3 mins ago</small>
+            <small class="text-muted">Cantidad: {{item.cantidad}}</small>
           </p>
         </div>
       </div>
     </div>
   </div>
-
-<img src="assets\imagenes\icon.png" class="iconapp" alt="imagen" height="200px">
+<div id="imgIcon">
+<img src="assets\imagenes\icon.png" class="iconapp" alt="imagen" height="150px">
+</div>

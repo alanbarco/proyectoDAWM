@@ -23,9 +23,13 @@ div#img{
     height: auto;
     border-radius:600px;
 } 
+#imgIcon{
+    text-align: center;
+}
 .iconapp{
     height: auto;
-    width: 70%;
-    margin-top: 30%;
-    margin-left: 15%;
+    width: 40%;
+}
+p{
+    font-size: 150%;
 }

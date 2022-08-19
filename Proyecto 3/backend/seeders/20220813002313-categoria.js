@@ -11,9 +11,10 @@ module.exports = {
      *   isBetaMember: false
      * }], {});
     */
+     let arrCategoria = ["Electrodomésticos", "Juguetes", "Aseo", "Hogar"];
      for (let i = 1; i <5; i++) {  
       await queryInterface.bulkInsert('Categoria', [{  
-          nombre: 'Categoria '+i,  
+          nombre: arrCategoria[i-1],  
           id: i, 
           createdAt: new Date(),  
           updatedAt: new Date()  
