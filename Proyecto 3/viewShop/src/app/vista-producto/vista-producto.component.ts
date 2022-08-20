@@ -8,6 +8,7 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./vista-producto.component.css']
 })
 export class VistaProductoComponent implements OnInit {
+  /*Inicializar interfaz Producto*/
   item : Producto = {
     id: -1,
     nombre: "",
@@ -20,9 +21,11 @@ export class VistaProductoComponent implements OnInit {
   };
 
   categoria: any[] = [];
+
   constructor(private productoService: ProductoService, private activatedRoute: ActivatedRoute) { }
 
   ngOnInit(): void {
+    
     let params = this.activatedRoute.snapshot.params;
     let id = params["id"]
 

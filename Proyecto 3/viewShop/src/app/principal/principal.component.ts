@@ -14,7 +14,9 @@ export class PrincipalComponent implements OnInit {
 
     
   constructor(private productoService: ProductoService) { }
-  funcion(categoria:number){
+  /*Funcion para filtrar datos de selector de categoria*/
+  filtrarCategoria(categoria:number){
+    /*Si el value es 0 se muestra todos los productos, caso contrario se filtra*/
     if(categoria !=0){
       this.productoService.obtenerCategoriasFiltro(categoria).subscribe(respuesta => {
         this.dataSource = respuesta as any;

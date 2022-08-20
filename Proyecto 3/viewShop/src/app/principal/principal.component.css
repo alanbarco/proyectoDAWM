@@ -1,5 +1,11 @@
 .todo{
-    background-color:  #F6F6E9;     
+    background-color:  #F6F6E9;   
+    height: 180%;
+    justify-content: center;
+    align-items: center;  
+}
+#metRest{
+     position: fixed; bottom:0; 
 }
 #btnVer{
     background-color: #C8DEC9;
@@ -24,9 +30,10 @@ mat-card-subtitle{
 }
 #btnRep{
     background-color: #7a9596;
-    margin-left: 20%;
+    margin-left: 10%;
     margin-bottom: 5%;
-    width: 25%;
+    width: 30%;
+    color: white;
 }
 #user{
     size: 200%;
@@ -34,6 +41,7 @@ mat-card-subtitle{
 p { margin:0 }
 .btn-block{
     background-color: #039E56;
+    color: white;
 }
 mat-card-title{
     text-align: center;

@@ -11,13 +11,13 @@
   <div class="header">
   <mat-form-field appearance="fill">
     <mat-label>Categoría</mat-label>
-    <mat-select (selectionChange)="funcion($event.value)">
+    <mat-select (selectionChange)="filtrarCategoria($event.value)">
       <mat-option value="0">Categoría</mat-option>
       <mat-option *ngFor="let categoria of categorias" value="{{categoria.id}}" >{{categoria.nombre}}</mat-option>
     </mat-select>
 
   </mat-form-field>
-  <button mat-raised-button  id="btnRep" class="btn-block" routerLink="/reporte"><mat-icon>summarize</mat-icon>
+  <button mat-raised-button type="button" class="btn btn-info btn-lg" id="btnRep" routerLink="/reporte"><mat-icon>summarize</mat-icon>
     <h3>Reporte</h3></button>
   </div>
 
@@ -36,7 +36,9 @@
 </mat-grid-list>
 
 <br>
-<div class="d-flex justify-content-center">
-<button mat-raised-button  class="btn-block" routerLink="/apirest">Métodos API REST</button>
+
+
 </div>
-</div>
+<footer class="d-flex justify-content-center">
+  <button mat-raised-button id="metRest" class="btn-block" routerLink="/apirest">Métodos API REST</button>
+  </footer>

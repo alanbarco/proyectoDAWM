@@ -5,8 +5,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SplashComponent } from './splash/splash.component';
-import { InicioComponent } from './inicio/inicio.component';
-import { RegistroComponent } from './registro/registro.component';
+
+
 import { PrincipalComponent } from './principal/principal.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { FormsModule } from '@angular/forms';
@@ -22,7 +22,7 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatSelectModule } from '@angular/material/select';
 import { MatOptionModule } from '@angular/material/core';
 import {MatGridListModule} from '@angular/material/grid-list';
-import { PerfilComponent } from './perfil/perfil.component';
+
 import { ApirestComponent } from './apirest/apirest.component';
 import { HttpClientModule } from '@angular/common/http';
 import { VistaProductoComponent } from './vista-producto/vista-producto.component';
@@ -32,10 +32,8 @@ import {MatPaginatorModule} from '@angular/material/paginator';
   declarations: [
     AppComponent,
     SplashComponent,
-    InicioComponent,
-    RegistroComponent,
     PrincipalComponent,
-    PerfilComponent,
+
     ApirestComponent,
     VistaProductoComponent,
     ReporteComponent

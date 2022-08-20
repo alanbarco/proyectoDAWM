@@ -3,42 +3,50 @@ import { MatPaginator, PageEvent } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
 import { ReporteService } from '../servicio/reporte.service';
 import { ProductoService } from '../servicio/producto.service';
-import { Reporte} from '../interfaz/reporte';
 @Component({
   selector: 'app-reporte',
   templateUrl: './reporte.component.html',
   styleUrls: ['./reporte.component.css']
 })
 export class ReporteComponent implements OnInit {
-  data:Reporte["id"] = [];
+  data:any[] = [];
   pageSize = 30;
-
-  constructor(private reporteService: ReporteService, private productoService:ProductoService) { }
   desde:number=0;
   hasta:number=30;
   nombreProductos:any[] = []
+  cantidadDatos = 0;
+  constructor(private reporteService: ReporteService, private productoService:ProductoService) { }
+  
   
   cambiarPagina(e: PageEvent){
     this.desde = e.pageIndex * e.pageSize;
     this.hasta = this.desde + e.pageSize;
   }
-  
-  ngOnInit(): void {
+  /*Genera la tabla con los datos de la base de datos NR*/
+  allData():void{
     this.reporteService.generarReporte().subscribe(respuesta =>{
-      this.data = respuesta as Reporte['id'];
-      console.log(typeof this.data)
+      this.data = respuesta as any;
+      this.cantidadDatos = Object.keys(this.data).length;
+      console.log(this.cantidadDatos)
     })
+  }
+
+  ngOnInit(): void {
+    this.allData();
+    /*Para generar el selector con nombre de productos*/
     this.productoService.obtenerProductos().subscribe(respuesta => {
       this.nombreProductos = respuesta as any;
     })
   }
 
-  funcion(producto:number){
-    console.log(producto)
+  /*Funcion con el evento del selector para filtrar datos*/
+  productoFiltro(producto:number){
+    if(producto == 0){
+      this.allData();
+    }
     this.reporteService.generarReporteFiltro(producto).subscribe(respuesta =>{
-      this.data = respuesta as Reporte[];
-      console.log(typeof this.data)
-      console.log(this.nombreProductos)
+     this.data = respuesta as any;
+     this.cantidadDatos = Object.keys(this.data).length;
     })
 }
 
