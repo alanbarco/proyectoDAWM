@@ -1,9 +1,9 @@
 {
   "development": {
-    "username": "ba7f7a95b2ab88",
-    "password": "87f2b0a5",
-    "database": "heroku_274f38c7b3a2393",
-    "host": "us-cdbr-east-06.cleardb.net",
+    "username": "root",
+    "password": "alanxbg2001",
+    "database": "mercado",
+    "host": "127.0.0.1",
     "dialect": "mysql"
   },
   "test": {

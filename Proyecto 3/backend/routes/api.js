@@ -24,6 +24,7 @@ router.get('/categoria', function(req, res, next) {
   })  
   .catch(error => res.status(400).send(error)) 
   });
+
   router.get('/categoria/:id', function(req, res, next) {
     Categoria.findOne({  
       where: { id: req.params.id }
@@ -33,6 +34,7 @@ router.get('/categoria', function(req, res, next) {
   })  
   .catch(error => res.status(400).send(error)) 
   });
+  
 router.get('/productos/:id', function(req, res, next){
   Producto.findOne({
     where: { id: req.params.id }
