@@ -6,12 +6,13 @@ import { ProductoService } from '../servicio/producto.service';
   templateUrl: './principal.component.html',
   styleUrls: ['./principal.component.css']
 })
+
 export class PrincipalComponent implements OnInit {
   categorias: any[] = [];
   dataSource: any[] = [];
   event: string='';
   data:String = '';  
-
+  showFiller = false;
     
   constructor(private productoService: ProductoService) { }
   /*Funcion para filtrar datos de selector de categoria*/

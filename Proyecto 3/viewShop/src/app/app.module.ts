@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SplashComponent } from './splash/splash.component';
-
+import {MatSidenavModule} from '@angular/material/sidenav';
 
 import { PrincipalComponent } from './principal/principal.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
@@ -57,6 +57,7 @@ import {MatPaginatorModule} from '@angular/material/paginator';
     MatSelectModule,
     MatOptionModule,
     MatGridListModule,
+    MatSidenavModule,
     HttpClientModule
   ],
   providers: [],
