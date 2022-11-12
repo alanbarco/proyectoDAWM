@@ -3,6 +3,7 @@
 ### Proyecto 1
 Consiste en una página web autobiográfica desarrollada con solamente HTML y CSS. Es responsive al tamaño del dispositivo.
  ![](/screenshots/proyecto1.png)
+![](/screenshots/proyecto1.gif)
 ### Proyecto 2
 Consiste en una Dashboard en donde utilizo la API balldontlie.io acerca de jugadores de la NBA en donde utilizo los conocimientos adquiridos con respecto al DOM, eventos, asincronía y AJAX.
 ![](/screenshots/proyecto2.png)
