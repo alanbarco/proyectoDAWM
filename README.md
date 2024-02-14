@@ -1,5 +1,3 @@
-# ESCUELA SUPERIOR POLITÉCNICA DEL LITORAL
-## Proyectos de la materia Desarrollo de aplicaciones web y móviles
 ### Proyecto 1
 Consiste en una página web autobiográfica desarrollada con solamente HTML y CSS. Es responsive al tamaño del dispositivo.
  ![](/screenshots/proyecto1.png)
